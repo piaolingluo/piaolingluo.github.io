@@ -3,18 +3,19 @@ import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 
 export default hopeTheme({
-  hostname: "https://vuepress-theme-hope-docs-demo.netlify.app",
+  hostname: "https://piaolingluo.github.io",
 
   author: {
-    name: "Mr.Hope",
-    url: "https://mister-hope.com",
+    name: "piaolingluo",
+    url: "",
   },
 
+  // Fontawesome: https://fontawesome.com/icons
   iconAssets: "fontawesome-with-brands",
 
   logo: "/logo.svg",
 
-  repo: "vuepress-theme-hope/vuepress-theme-hope",
+  repo: "piaolingluo/piaolingluo.github.io",
 
   docsDir: "src",
 
@@ -24,7 +25,11 @@ export default hopeTheme({
   // sidebar
   sidebar,
 
-  footer: "默认页脚",
+  // 是否全局启用路径导航
+  breadcrumb: true,
+
+  // 页脚 <a href='https://github.com/piaolingluo'>飘零落</a>
+  footer: "",
 
   displayFooter: true,
 
@@ -34,19 +39,33 @@ export default hopeTheme({
     },
   },
 
+  // 全局禁用页面编辑
+  editLink: false,
+  
   // page meta
   metaLocales: {
     editLink: "在 GitHub 上编辑此页",
   },
 
-  plugins: {
-    // You should generate and use your own comment service
+  plugins: {  
+    /**
+     * You should generate and use your own comment service
+     * 
+     * 1. 你需要创建一个公开仓库，并开启评论区，以作为评论存放的地点
+     * 2. 你需要安装 Giscus App(https://github.com/apps/giscus)，使其有权限访问对应仓库。
+     * 3. 在完成以上步骤后，请前往 Giscus 页面(https://giscus.app/zh-CN) 获得你的设置。你只需要填写仓库和 Discussion 分类，
+     * 之后滚动到页面下部的 “启用 giscus” 部分，复制 data-repo, data-repo-id, data-category 和 data-category-id 四项，
+     * 并将其作为插件选项传入 repo, repoId, category categoryId。
+     */
     comment: {
+      // 全局禁用评论
+      comment: false,
       provider: "Giscus",
-      repo: "vuepress-theme-hope/giscus-discussions",
-      repoId: "R_kgDOG_Pt2A",
+      repo: "piaolingluo/piaolingluo.github.io",
+      repoId: "R_kgDOKXjT0w",
       category: "Announcements",
-      categoryId: "DIC_kwDOG_Pt2M4COD69",
+      categoryId: "DIC_kwDOKXjT084CZmMC",
+      reactionsEnabled: false,
     },
 
     // All features are enabled for demo, only preserve features you need here

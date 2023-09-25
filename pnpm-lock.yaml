@@ -8,6 +8,9 @@ devDependencies:
   '@vuepress/client':
     specifier: 2.0.0-beta.67
     version: registry.npmmirror.com/@vuepress/client@2.0.0-beta.67
+  '@vuepress/plugin-search':
+    specifier: 2.0.0-beta.67
+    version: registry.npmmirror.com/@vuepress/plugin-search@2.0.0-beta.67
   vue:
     specifier: ^3.3.4
     version: registry.npmmirror.com/vue@3.3.4
@@ -2729,6 +2732,23 @@ packages:
     dependencies:
       '@vuepress/core': registry.npmmirror.com/@vuepress/core@2.0.0-beta.67
       prismjs: registry.npmmirror.com/prismjs@1.29.0
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - supports-color
+    dev: true
+
+  registry.npmmirror.com/@vuepress/plugin-search@2.0.0-beta.67:
+    resolution: {integrity: sha512-oju9DK2zQE7PqP7EXm/c0ekoG0clLSn4h6Y7DvgbXJRmonM42oHHj3DdC/eGtyLhTUGuD7mw93Svj2uaC556Nw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@vuepress/plugin-search/-/plugin-search-2.0.0-beta.67.tgz}
+    name: '@vuepress/plugin-search'
+    version: 2.0.0-beta.67
+    dependencies:
+      '@vuepress/client': registry.npmmirror.com/@vuepress/client@2.0.0-beta.67
+      '@vuepress/core': registry.npmmirror.com/@vuepress/core@2.0.0-beta.67
+      '@vuepress/shared': registry.npmmirror.com/@vuepress/shared@2.0.0-beta.67
+      '@vuepress/utils': registry.npmmirror.com/@vuepress/utils@2.0.0-beta.67
+      chokidar: registry.npmmirror.com/chokidar@3.5.3
+      vue: registry.npmmirror.com/vue@3.3.4
+      vue-router: registry.npmmirror.com/vue-router@4.2.5(vue@3.3.4)
     transitivePeerDependencies:
       - '@vue/composition-api'
       - supports-color
