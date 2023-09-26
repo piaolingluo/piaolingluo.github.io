@@ -3,6 +3,13 @@ import { arraySidebar } from "vuepress-theme-hope";
 export const notesSidebarConfig = arraySidebar([
     "", /* /notes/ */
     {
+      text: "设计模式",
+      icon: "fa-solid fa-pen",
+      prefix: "design/",
+      collapsible: true,
+      children: "structure",
+    },
+    {
       text: "Java基础",
       icon: "fa-brands fa-java",
       prefix: "java/",

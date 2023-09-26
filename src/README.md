@@ -27,6 +27,11 @@ highlights:
       background-repeat: repeat
       background-size: initial
     features:
+      - title: 设计模式
+        icon: fa-solid fa-pen
+        details: 提高代码可读性和可扩展性
+        link: ./notes/design/
+
       - title: Java
         icon: fa-brands fa-java
         details: Java基础

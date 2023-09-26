@@ -9,6 +9,10 @@ export default defineUserConfig({
   title: "BroNotes(学长笔记)",
   description: "学长笔记，涵盖了后端所需基础知识",
 
+  head: [
+    ["meta", {name: "referrer", content: "no-referrer"}],
+  ],
+
   theme,
 
   plugins: [
