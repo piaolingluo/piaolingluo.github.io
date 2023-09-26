@@ -1,7 +1,6 @@
 import { arraySidebar } from "vuepress-theme-hope";
 
 export const notesSidebarConfig = arraySidebar([
-    "", /* /notes/ */
     {
       text: "设计模式",
       icon: "fa-solid fa-pen",
