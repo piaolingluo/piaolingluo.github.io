@@ -49,7 +49,7 @@ comment: true
 > 是简单工厂模式的创建目标，所有创建的对象都是充当这个角色的某个具体类的实例。
 
 ### 2.3 简单工厂模式的 UML 类图
-![简单工厂模式类图](http://upload-images.jianshu.io/upload_images/5825596-e6ac88ac8bb1e68c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![简单工厂模式类图](http://upload-images.jianshu.io/upload_images/5825596-e6ac88ac8bb1e68c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240){referrerpolicy="no-referrer"}
 
 ## 三、从日常生活看工厂模式
 就拿巴扎黑理发这件事来说，服务员就充当了工厂类，她根据巴扎黑想要剪的价位来安排一位合适的理发师。理发师这个称谓就相当于抽象产品，它描述了所有理发师都具备的能力——理发。服务员安排的这位总监就相当于具体产品。
@@ -315,7 +315,7 @@ public class TranslateController {
 ## PS: 
 讲到这里，大家有没有对简单工厂模式有一定的了解呢？希望这篇文章能帮助大家更好的理解和使用简单工厂模式😜。
 忘了介绍我们故事的主角了，巴扎黑，你过来！
-![](http://upload-images.jianshu.io/upload_images/5825596-620bec9b5727ef1b.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-![](http://upload-images.jianshu.io/upload_images/5825596-549dc015e50951e0.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](http://upload-images.jianshu.io/upload_images/5825596-620bec9b5727ef1b.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240){referrerpolicy="no-referrer"}
+![](http://upload-images.jianshu.io/upload_images/5825596-549dc015e50951e0.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240){referrerpolicy="no-referrer"}
 
 喜欢巴扎黑的，可以关注[吾皇的白茶](https://weibo.com/chahuashi) 😜
