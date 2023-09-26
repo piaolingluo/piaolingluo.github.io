@@ -10,7 +10,7 @@ export default defineUserConfig({
   description: "学长笔记，涵盖了后端所需基础知识",
 
   head: [
-    ["meta", {name: "referrer", content: "no-referrer"}],
+    // ["meta", {name: "referrer", content: "no-referrer"}],
     ["meta", {"http-equiv": "Cache-Control", content: "no-cache, no-store, must-revalidate"}],
     ["meta", {"http-equiv": "Pragma", content: "no-cache"}],
     ["meta", {"http-equiv": "Expires", content: "0"}],
