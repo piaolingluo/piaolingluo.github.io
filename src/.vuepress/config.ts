@@ -11,6 +11,11 @@ export default defineUserConfig({
 
   head: [
     ["meta", {name: "referrer", content: "no-referrer"}],
+    ["meta", {"http-equiv": "Cache-Control", content: "no-cache, no-store, must-revalidate"}],
+    ["meta", {"http-equiv": "Pragma", content: "no-cache"}],
+    ["meta", {"http-equiv": "Expires", content: "0"}],
+    // 百度统计
+    ["script", {}, 'var _hmt = _hmt || [];(function(){ var hm = document.createElement("script");hm.src = "https://hm.baidu.com/hm.js?c462f4fcf46a94f813b4514af33bf863";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm, s);})();'],
   ],
 
   theme,
