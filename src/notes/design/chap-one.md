@@ -319,3 +319,4 @@ public class TranslateController {
 ![](http://upload-images.jianshu.io/upload_images/5825596-549dc015e50951e0.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240){referrerpolicy="no-referrer"}
 
 喜欢巴扎黑的，可以关注[吾皇的白茶](https://weibo.com/chahuashi) 😜
+<Share colorful />
