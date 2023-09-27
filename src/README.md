@@ -1,14 +1,14 @@
 ---
 home: true
 icon: home
-title: 主页
+title: 学长笔记
 heroImage: /logo.svg
 bgImage: /assets/image/bg-6-light.svg
 bgImageDark: /assets/image/bg-6-dark.svg
 bgImageStyle:
   background-attachment: fixed
 heroText: 学长笔记
-tagline: 学长珍藏的 Java 学习笔记，涵盖了后端所需的基础知识，希望对你有所帮助！
+tagline: 一个记录和分享 Java 学习心得的小站
 actions:
   - text: 阅读 
     link: ./notes/
