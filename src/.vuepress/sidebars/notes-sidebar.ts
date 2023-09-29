@@ -9,6 +9,13 @@ export const notesSidebarConfig = arraySidebar([
       children: "structure",
     },
     {
+      text: "JVM",
+      icon: "fa-solid fa-cloud",
+      prefix: "jvm/",
+      collapsible: true,
+      children: "structure",
+    },
+    {
       text: "Java基础",
       icon: "fa-brands fa-java",
       prefix: "java/",

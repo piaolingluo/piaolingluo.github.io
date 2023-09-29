@@ -32,6 +32,11 @@ highlights:
         details: 提高代码可读性和可扩展性
         link: ./notes/design/
 
+      - title: JVM
+        icon: fa-solid fa-cloud
+        details: Java虚拟机
+        link: ./notes/jvm/
+
       - title: Java
         icon: fa-brands fa-java
         details: Java基础
