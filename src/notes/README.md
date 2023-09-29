@@ -4,6 +4,7 @@ icon: note-sticky
 ---
 
 - [设计模式](./design/)
+- [JVM](./jvm/)
 - [Java基础](./java/)
 - [并发编程](./concurrent/)
 - [MySQL](./mysql/)
