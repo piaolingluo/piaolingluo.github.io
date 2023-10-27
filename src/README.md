@@ -37,23 +37,23 @@ highlights:
         details: Java虚拟机
         link: ./notes/jvm/
 
-      - title: Java
-        icon: fa-brands fa-java
-        details: Java基础
-        link: ./notes/java/
+      # - title: Java
+      #   icon: fa-brands fa-java
+      #   details: Java基础
+      #   link: ./notes/java/
 
       - title: 并发编程
         icon: fa-brands fa-threads
         details: Java并发编程
         link: ./notes/concurrent/
 
-      - title: 数据库
-        icon: fa-solid fa-database
-        details: MySQL
-        link: ./notes/mysql/
+      # - title: 数据库
+      #   icon: fa-solid fa-database
+      #   details: MySQL
+      #   link: ./notes/mysql/
 
-      - title: 缓存
-        icon: fa-solid fa-server
-        details: Redis
-        link: ./notes/redis/
+      # - title: 缓存
+      #   icon: fa-solid fa-server
+      #   details: Redis
+      #   link: ./notes/redis/
 ---
