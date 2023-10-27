@@ -163,6 +163,12 @@ npm i -D vuepress-theme-hope
 
 ### 图片增强
 
+#### 图片跨域问题
+
+通过加入 `{referrerpolicy="no-referrer"}` 解决
+
+![图片跨域访问](http://upload-images.jianshu.io/upload_images/5825596-e6ac88ac8bb1e68c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240){referrerpolicy="no-referrer"}
+
 支持为图片设置颜色模式和大小
 
 - [查看详情](https://theme-hope.vuejs.press/zh/guide/markdown/image.html)
