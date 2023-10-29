@@ -33,6 +33,20 @@ export default hopeTheme({
 
   displayFooter: true,
 
+  blog: {
+    avatar: "/avatar.jpeg",
+    roundAvatar: true,
+    name: "飘零落",
+    description: "后端开发者",
+    // 每页的文章数量
+    articlePerPage: 10,
+    medias: {
+      Weibo: "https://weibo.com/u/1641295373",
+      GitHub: "https://github.com/piaolingluo",
+      Gitee: "https://gitee.com/xiao_gege",
+    },
+  },
+
   encrypt: {
     config: {
       "/demo/encrypt.html": ["1234"],
@@ -47,7 +61,12 @@ export default hopeTheme({
     editLink: "在 GitHub 上编辑此页",
   },
 
-  plugins: {  
+  plugins: {
+    // 启用博客
+    blog: {
+      // 原创且能被索引的页面作为文章
+      filter: (page) => Boolean(page.filePathRelative) && !page.frontmatter.home && Boolean(page.frontmatter.isOriginal) && page.frontmatter.index !== false,
+    },
     /**
      * You should generate and use your own comment service
      * 

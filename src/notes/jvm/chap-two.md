@@ -1,6 +1,7 @@
 ---
 title: 第二章 垃圾收集器与内存分配策略
 order: 2
+isOriginal: true
 tag:
   - JVM
 ---

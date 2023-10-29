@@ -1,4 +1,4 @@
 ---
-title: 生活
+title: 随笔
 icon: lightbulb
 ---

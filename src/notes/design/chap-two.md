@@ -2,7 +2,7 @@
 title: 第二章 模板方法模式
 index: false
 order: 2
-category: 原创
+isOriginal: true
 tag:
   - 设计模式
 comment: true
