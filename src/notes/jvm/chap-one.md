@@ -1,6 +1,7 @@
 ---
 title: 第一章 Java内存区域与内存溢出异常
 order: 1
+isOriginal: true
 tag:
  - JVM
 ---

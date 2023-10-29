@@ -1,7 +1,7 @@
 ---
 title: 第一章 简单工厂模式在实际项目中的使用
 order: 1
-category: 原创
+isOriginal: true
 tag: 
  - 设计模式
  - 简单工厂模式

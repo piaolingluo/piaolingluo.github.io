@@ -7,12 +7,8 @@ export default navbar([
     link: "/",
   },
   "/notes/",
+  "/blog",
   "/books/",
-  {
-    text: "微博",
-    icon: "fa-brands fa-weibo",
-    link: "https://weibo.com/u/1641295373",
-  },
   // {
   //   text: "指南",
   //   icon: "lightbulb",
