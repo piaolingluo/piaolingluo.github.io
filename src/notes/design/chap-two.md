@@ -3,6 +3,8 @@ title: 第二章 模板方法模式
 index: false
 order: 2
 isOriginal: true
+category:
+  - 笔记
 tag:
   - 设计模式
 comment: true
