@@ -84,7 +84,7 @@ export default hopeTheme({
       repoId: "R_kgDOKXjT0w",
       category: "Announcements",
       categoryId: "DIC_kwDOKXjT084CZmMC",
-      reactionsEnabled: false,
+      reactionsEnabled: true,
     },
 
     // All features are enabled for demo, only preserve features you need here
