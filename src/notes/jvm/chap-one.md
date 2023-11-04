@@ -2,8 +2,10 @@
 title: 第一章 Java内存区域与内存溢出异常
 order: 1
 isOriginal: true
+category:
+  - 笔记
 tag:
- - JVM
+  - JVM
 ---
 ## JVM 内存区域
 

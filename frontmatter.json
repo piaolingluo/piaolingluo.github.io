@@ -1,0 +1,52 @@
+{
+  "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.taxonomy.contentTypes": [
+    {
+      "name": "default",
+      "pageBundle": false,
+      "previewPath": null,
+      "fields": [
+        {
+          "title": "title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "icon",
+          "name": "icon",
+          "type": "string"
+        },
+        {
+          "title": "index",
+          "name": "index",
+          "type": "boolean"
+        },
+        {
+          "title": "order",
+          "name": "order",
+          "type": "number"
+        },
+        {
+          "title": "isOriginal",
+          "name": "isOriginal",
+          "type": "boolean"
+        },
+        {
+          "title": "category",
+          "name": "category",
+          "type": "categories"
+        },
+        {
+          "title": "tag",
+          "name": "tag",
+          "type": "tags"
+        },
+        {
+          "title": "comment",
+          "name": "comment",
+          "type": "boolean"
+        }
+      ]
+    }
+  ]
+}

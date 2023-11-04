@@ -1,8 +1,10 @@
 ---
 title: 内存 dump 分析工具 - mat
 index: false
+category:
+  - 笔记
 tag:
- - JVM
+  - JVM
 ---
 
 ## mat 的安装
