@@ -1,1 +1,0 @@
-import{_ as o}from"./plugin-vue_export-helper-c27b6911.js";import{r as t,o as c,c as n,b as r}from"./app-60796361.js";const _={};function s(a,l){const e=t("YouTube");return c(),n("div",null,[r(e,{id:"UI6lqHOVHic"})])}const f=o(_,[["render",s],["__file","20231104.html.vue"]]);export{f as default};
