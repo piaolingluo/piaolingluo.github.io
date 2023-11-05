@@ -43,7 +43,7 @@ export default hopeTheme({
     medias: {
       Weibo: "https://weibo.com/u/1641295373",
       GitHub: "https://github.com/piaolingluo",
-      Gitee: "https://gitee.com/xiao_gege",
+      Gitee: "https://gitee.com/cpgege",
     },
   },
 
