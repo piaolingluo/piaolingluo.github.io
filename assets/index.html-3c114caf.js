@@ -1,0 +1,1 @@
+import{_ as e}from"./plugin-vue_export-helper-c27b6911.js";import{o as t,c as o,d as c}from"./app-ecc5d32a.js";const n={},_=c("p",null,"设计模式是一种在软件设计中广泛使用的通用解决方案，它们可以帮助解决常见的设计问题，提高代码的可重用性、可维护性和可扩展性。设计模式不是具体的代码或库，而是一种描述如何解决特定问题的经验法则。",-1),s=[_];function r(a,l){return t(),o("div",null,s)}const f=e(n,[["render",r],["__file","index.html.vue"]]);export{f as default};
