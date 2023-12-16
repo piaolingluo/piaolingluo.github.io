@@ -33,6 +33,9 @@ export default hopeTheme({
 
   displayFooter: true,
 
+  // 显示全屏按钮
+  fullscreen: true,
+
   blog: {
     avatar: "/avatar.jpeg",
     roundAvatar: true,
