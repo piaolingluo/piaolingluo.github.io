@@ -71,7 +71,78 @@ public class Daemon {
 
 ## 线程间通信
 
+::: tip synchronized
+
 synchronized 关键字能够确保同一时刻只能有一个线程处于同步块或同步方法中，从而保证了一个线程对共享变量的修改对另一个线程可见。
+
+:::
+
+先来看一个不使用 synchronized 的情况下，多线程同时修改共享变量的案例：
+
+```java
+public class Counter {
+
+    private int count = 0;
+
+    public void increment() {
+        count++;
+    }
+
+    public int getCount() {
+        return count;
+    }
+
+    public static void main(String[] args) {
+        Counter counter = new Counter();
+
+        Thread thread1 = new Thread(() -> {
+            for (int i = 0; i < 100000; i++) {
+                counter.increment();
+            }
+        }, "thread-1");
+
+        Thread thread2 = new Thread(() -> {
+            for (int i = 0; i < 100000; i++) {
+                counter.increment();
+            }
+        }, "thread-2");
+
+        thread1.start();
+        thread2.start();
+
+        try {
+            thread1.join();
+            thread2.join();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+        System.out.println(counter.getCount());
+    }
+}
+```
+
+运行结果：
+
+```text
+138076
+```
+
+我们期望的是，在对共享变量 count 进行 200000 次累加后，结果会变成 200000，而实际每次执行的结果都不一样，且都小于我们的期望值。
+
+如何避免多线程同时修改共享变量而导致的数据不一致问题呢？这里我们对 increment() 方法加上 synchronized 关键字：
+
+```java
+public synchronized void increment() {
+    count++;
+}
+```
+
+运行结果：
+
+```text
+200000
+```
 
 ### 线程访问同步块的过程
 
@@ -84,11 +155,46 @@ synchronized (object) {
 
 ![线程获取对象监视器以访问同步块](./image/线程获取对象监视器以访问同步块.png)
 
-任意线程对 Object 的访问，首先要获得 Object 的监视器。如果获取失败，线程进入同步队列，线程状态变为 BLOCKED。当访问 Object 的前驱释放了锁，则该释放操作唤醒阻塞在同步队列中的线程，使其重新尝试对监视器的获取。
+任意线程对 Object（Object 由 synchronized 保护）的访问，首先要获得 Object 的监视器。如果获取失败，线程进入同步队列，线程状态变为 BLOCKED。当访问 Object 的前驱（获得了锁的线程）释放了锁，则该释放操作唤醒阻塞在同步队列中的线程，使其重新尝试对监视器的获取。
 
 ### 等待 / 通知机制
 
 ![等待 / 通知的相关方法](./image/等待-通知的相关方法.png)
 
+::: warning 调用 wait()、notify() 及 notifyAll() 时注意细节
+
+1. 使用 wait()、notify() 和 notifyAll() 时，需要先对调用对象加锁。
+
+2. 调用 wait() 方法后，线程状态由 RUNNING 变为 WAITING，并将当前线程放置到对象的等待队列。
+
+3. notify() 或 notifyAll() 方法调用后，等待线程依旧不会从 wait() 返回，需要调用 notify() 或 notifAll() 的线程释放锁之后，等待线程才**有机会**从 wait() 返回。
+
+4. **notify() 方法将等待队列中的一个等待线程从等待队列中移到同步队列中，而 notifyAll() 方法则是将等待队列中所有的线程全部移到同步队列**，被移动的线程状态由 WAITING 变为 BLOCKED。
+
+5. **从 wait() 方法返回的前提是获得了调用对象的锁**。
+
+:::
+
+![wait()、nofify() 运行过程](./image/Wait-Notify运行过程.png)
+
+### 等待 / 通知的经典范式
+
+等待方：
+```java
+synchronized (对象) {
+    while (条件不满足) {
+        对象.wait();
+    }
+    对应的处理逻辑
+}
+```
+
+通知方：
+```java
+synchronized (对象) {
+    改变条件
+    对象.notifyAll();
+}
+```
 
 <Share colorful services="qrcode,telegram,twitter" />
