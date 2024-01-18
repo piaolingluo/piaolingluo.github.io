@@ -111,6 +111,7 @@ public class Counter {
         thread2.start();
 
         try {
+            // 等待 thread1 执行完，才返回
             thread1.join();
             thread2.join();
         } catch (InterruptedException e) {
@@ -159,11 +160,11 @@ synchronized (object) {
 
 ### 等待 / 通知机制
 
-![等待 / 通知的相关方法](./image/等待-通知的相关方法.png)
+![Object 的等待 / 通知相关方法](./image/等待-通知的相关方法.png)
 
 ::: warning 调用 wait()、notify() 及 notifyAll() 时注意细节
 
-1. 使用 wait()、notify() 和 notifyAll() 时，需要先对调用对象加锁。
+1. 使用 wait()、notify() 和 notifyAll() 时，需要**先对调用对象加锁**。
 
 2. 调用 wait() 方法后，线程状态由 RUNNING 变为 WAITING，并将当前线程放置到对象的等待队列。
 
@@ -196,5 +197,54 @@ synchronized (对象) {
     对象.notifyAll();
 }
 ```
+
+### thread.join() 的使用
+
+如果一个线程 A 执行了 thread.join() 语句，其含义是：当前线程 A 等待 thread 线程终止之后才从 thread.join() 返回。
+
+![](./image/website/waiting-for-you.png)
+
+为了方便记忆，你也可以理解成“**我等你（执行完）**”，源码如下：
+
+```java
+/**
+ * Waits for this thread to die.
+ * （我等你执行完）
+ */
+public final void join() throws InterruptedException {
+    join(0);
+}
+
+public final synchronized void join(long millis)
+        throws InterruptedException {
+    long base = System.currentTimeMillis();
+    long now = 0;
+
+    if (millis < 0) {
+        throw new IllegalArgumentException("timeout value is negative");
+    }
+
+    if (millis == 0) {
+        // 你还在执行吗？
+        while (isAlive()) {
+            // 还在执行的话，那我无限等下去，反正你执行完了会调用自身的 notifyAll() 方法
+            // 将我唤醒，此后我将继续前行
+            wait(0);
+        }
+    } else {
+        while (isAlive()) {
+            long delay = millis - now;
+            if (delay <= 0) {
+                break;
+            }
+            wait(delay);
+            now = System.currentTimeMillis() - base;
+        }
+    }
+}
+
+```
+
+通过分析 join() 方法的源码，可以发现正好符合“等待 / 通知”经典范式的“等待方”，即：加锁（这里的锁是被执行 join() 方法的线程对象）、条件循环和处理逻辑 3 个步骤。
 
 <Share colorful services="qrcode,telegram,twitter" />
