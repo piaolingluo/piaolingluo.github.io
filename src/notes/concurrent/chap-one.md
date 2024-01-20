@@ -71,13 +71,7 @@ public class Daemon {
 
 ## 线程间通信
 
-::: tip synchronized
-
-synchronized 关键字能够确保同一时刻只能有一个线程处于同步块或同步方法中，从而保证了一个线程对共享变量的修改对另一个线程可见。
-
-:::
-
-先来看一个不使用 synchronized 的情况下，多线程同时修改共享变量的案例：
+先来看一个多线程同时修改共享变量的案例：
 
 ```java
 public class Counter {
@@ -144,6 +138,11 @@ public synchronized void increment() {
 ```text
 200000
 ```
+::: tip synchronized
+
+synchronized 关键字能够确保同一时刻只能有一个线程处于同步块或同步方法中，从而保证了一个线程对共享变量的修改对另一个线程可见。
+
+:::
 
 ### 线程访问同步块的过程
 

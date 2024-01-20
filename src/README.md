@@ -29,7 +29,7 @@ highlights:
     features:
       - title: 设计模式
         icon: fa-solid fa-pen
-        details: 提高代码可读性和可扩展性
+        details: Design Patterns
         link: ./notes/design/
 
       - title: JVM
