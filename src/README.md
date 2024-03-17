@@ -10,9 +10,10 @@ bgImageStyle:
 heroText: 学长笔记
 tagline: 一个记录和分享 Java 学习心得的小站
 actions:
-  - text: 阅读 
+  - text: 阅读
     link: ./notes/
     type: primary
+    icon: fa-brands fa-apple
 
   # - text: 知识星球
   #   link: ./slides
