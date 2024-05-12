@@ -11,6 +11,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: gh-pages
+
       - name: 同步静态资源到服务器
         uses: appleboy/scp-action@v0.1.7
         with:
@@ -18,5 +23,5 @@ jobs:
           username: ${{ secrets.CPGEGE_USERNAME }}
           password: ${{ secrets.CPGEGE_PASSWORD }}
           port: ${{ secrets.CPGEGE_PORT }}
-          source: "src/.vuepress/dist/.nojekyll/"
+          source: "/"
           target: ${{ secrets.CPGEGE_REMOTE_TARGET }}
