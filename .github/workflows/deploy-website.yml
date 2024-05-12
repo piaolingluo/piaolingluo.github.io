@@ -17,7 +17,7 @@ jobs:
           ref: gh-pages
 
       - name: ls
-        run: ll -a
+        run: ls -a
         
       - name: 同步静态资源到服务器
         uses: appleboy/scp-action@v0.1.7
