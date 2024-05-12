@@ -26,5 +26,5 @@ jobs:
           username: ${{ secrets.CPGEGE_USERNAME }}
           password: ${{ secrets.CPGEGE_PASSWORD }}
           port: ${{ secrets.CPGEGE_PORT }}
-          source: "/"
+          source: "./"
           target: ${{ secrets.CPGEGE_REMOTE_TARGET }}
