@@ -28,7 +28,7 @@ export default hopeTheme({
   // 是否全局启用路径导航
   breadcrumb: true,
 
-  // 页脚 <a href='https://github.com/piaolingluo'>飘零落</a>
+  // 页脚
   footer: "<a href='https://beian.miit.gov.cn/' target='_blank'>沪ICP备2024071272号-1</a>",
 
   copyright: "© 2023-至今 cpgege",
