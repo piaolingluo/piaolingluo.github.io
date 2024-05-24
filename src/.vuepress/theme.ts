@@ -29,7 +29,9 @@ export default hopeTheme({
   breadcrumb: true,
 
   // 页脚 <a href='https://github.com/piaolingluo'>飘零落</a>
-  footer: "",
+  footer: "<a href='https://beian.miit.gov.cn/' target='_blank'>沪ICP备2024071272号-1</a>",
+
+  copyright: "© 2023-至今 cpgege",
 
   displayFooter: true,
 
