@@ -2,4 +2,4 @@
 User-agent:*
 Disallow:
 
-Sitemap: https://cpgege.gitee.io/sitemap.xml
+Sitemap: https://cpgege.cn/sitemap.xml
