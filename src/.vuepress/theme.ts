@@ -3,7 +3,7 @@ import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 
 export default hopeTheme({
-  hostname: "https://cpgege.gitee.io",
+  hostname: "https://cpgege.cn",
 
   author: {
     name: "piaolingluo",
