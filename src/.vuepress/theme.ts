@@ -3,7 +3,7 @@ import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 
 export default hopeTheme({
-  hostname: "https://cpgege.gitee.io",
+  hostname: "https://cpgege.cn",
 
   author: {
     name: "piaolingluo",
@@ -28,8 +28,10 @@ export default hopeTheme({
   // 是否全局启用路径导航
   breadcrumb: true,
 
-  // 页脚 <a href='https://github.com/piaolingluo'>飘零落</a>
-  footer: "",
+  // 页脚
+  footer: "<a href='https://beian.miit.gov.cn/' target='_blank'>沪ICP备2024071272号-1</a>",
+
+  copyright: "© 2023-至今 cpgege",
 
   displayFooter: true,
 
