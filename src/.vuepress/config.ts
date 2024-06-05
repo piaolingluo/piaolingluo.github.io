@@ -14,7 +14,7 @@ export default defineUserConfig({
     ["meta", {"http-equiv": "Pragma", content: "no-cache"}],
     ["meta", {"http-equiv": "Expires", content: "0"}],
     // 百度统计
-    ["script", {}, 'var _hmt = _hmt || [];(function(){ var hm = document.createElement("script");hm.src = "https://hm.baidu.com/hm.js?63dc141c0b2b95b8cf2becc1774686a1";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm, s);})();'],
+    ["script", {}, 'var _hmt = _hmt || [];(function(){ var hm = document.createElement("script");hm.src = "https://hm.baidu.com/hm.js?d5d67b542db88aa4a01170e8496ed19c";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm, s);})();'],
     // 关键词
     ["meta", {name: "keywords", content: "Java, 设计模式, 并发编程, MySQL, Redis"}],
   ],
