@@ -29,7 +29,7 @@ export default hopeTheme({
   breadcrumb: true,
 
   // 页脚
-  footer: "<a href='https://beian.miit.gov.cn/' target='_blank'>沪ICP备2024071272号-1</a>",
+  footer: "<a href='https://beian.miit.gov.cn/' rel='noopener noreferrer' target='_blank' style='color:inherit;text-decoration:none;white-space:nowrap;'>沪ICP备2024071272号-1</a> / <a href='https://beian.mps.gov.cn/#/query/webSearch?code=31010702008085' rel='noopener noreferrer' target='_blank' style='color:inherit;text-decoration:none;white-space:nowrap;'><img src='/ghs.png' style='width:1rem;vertical-align:middle;'> 沪公网安备31010702008085</a>",
 
   copyright: "© 2023-至今 cpgege",
 
