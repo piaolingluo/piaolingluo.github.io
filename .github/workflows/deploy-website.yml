@@ -17,16 +17,11 @@ jobs:
           ref: gh-pages
 
       - name: print
-        env:
-          host: ${{ secrets.CPGEGE_HOST }}
-          username: ${{ secrets.CPGEGE_USERNAME }}
-          port: ${{ secrets.CPGEGE_PORT }}
-          target: ${{ secrets.CPGEGE_REMOTE_TARGET }}
         run: |
-          echo: "host: $host"
-          echo: "username: $username"
-          echo: "port: $port"
-          echo: "target: $target"
+          echo "host: ${{ secrets.CPGEGE_HOST }}"
+          echo "username: ${{ secrets.CPGEGE_USERNAME }}"
+          echo "port: ${{ secrets.CPGEGE_PORT }}"
+          echo "target: ${{ secrets.CPGEGE_REMOTE_TARGET }}"
         
       - name: 同步静态资源到服务器
         uses: appleboy/scp-action@v0.1.7
