@@ -15,14 +15,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           ref: gh-pages
-
-      - name: print
-        run: |
-          echo "host: ${{ secrets.CPGEGE_HOST }}"
-          echo "username: ${{ secrets.CPGEGE_USERNAME }}"
-          echo "port: ${{ secrets.CPGEGE_PORT }}"
-          echo "target: ${{ secrets.CPGEGE_REMOTE_TARGET }}"
-        
+   
       - name: 同步静态资源到服务器
         uses: appleboy/scp-action@v0.1.7
         with:
