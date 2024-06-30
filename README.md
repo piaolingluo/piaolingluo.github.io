@@ -1,3 +1,3 @@
-# 我的小站 test
+# 我的小站
 
 [cpgege.cn](https://cpgege.cn/)
