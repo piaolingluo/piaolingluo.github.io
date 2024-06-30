@@ -25,3 +25,15 @@ jobs:
           port: ${{ secrets.CPGEGE_PORT }}
           source: "./,!.git"
           target: ${{ secrets.CPGEGE_REMOTE_TARGET }}
+
+      - name: print
+        env:
+          host: ${{ secrets.CPGEGE_HOST }}
+          username: ${{ secrets.CPGEGE_USERNAME }}
+          port: ${{ secrets.CPGEGE_PORT }}
+          target: ${{ secrets.CPGEGE_REMOTE_TARGET }}
+        run: |
+          echo: "host: $host"
+          echo: "username: $username"
+          echo: "port: $port"
+          echo: "target: $target"
