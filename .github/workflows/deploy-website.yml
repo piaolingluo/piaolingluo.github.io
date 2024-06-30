@@ -15,16 +15,6 @@ jobs:
         uses: actions/checkout@v3
         with:
           ref: gh-pages
-        
-      - name: 同步静态资源到服务器
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: ${{ secrets.CPGEGE_HOST }}
-          username: ${{ secrets.CPGEGE_USERNAME }}
-          password: ${{ secrets.CPGEGE_PASSWORD }}
-          port: ${{ secrets.CPGEGE_PORT }}
-          source: "./,!.git"
-          target: ${{ secrets.CPGEGE_REMOTE_TARGET }}
 
       - name: print
         env:
@@ -37,3 +27,13 @@ jobs:
           echo: "username: $username"
           echo: "port: $port"
           echo: "target: $target"
+        
+      - name: 同步静态资源到服务器
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.CPGEGE_HOST }}
+          username: ${{ secrets.CPGEGE_USERNAME }}
+          password: ${{ secrets.CPGEGE_PASSWORD }}
+          port: ${{ secrets.CPGEGE_PORT }}
+          source: "./,!.git"
+          target: ${{ secrets.CPGEGE_REMOTE_TARGET }}
